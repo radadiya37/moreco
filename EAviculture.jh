@@ -1,0 +1,133 @@
+
+entity Employe {
+	prenom String,
+	nom String,
+	email String,
+	numeroTel String,
+	dateEmbauche LocalDate
+	salaire Long,
+    adresse String,
+    cin String,
+    dateNaissance LocalDate
+    sexe String
+}
+
+entity Fonction {
+	prenom String,
+  	codeFonction String,
+  	description String
+}
+
+entity Fournisseur {
+	nomComplete String,
+  	adresse String,
+    email String,
+    numeroTel String
+}
+
+
+entity Stock{
+	codeStock String,
+    surface Long
+}
+
+entity Emplacement{
+	codeEmplacement String,
+    volume Long,
+    reserve Boolean
+}
+
+entity Facture{
+	numeroFacture String,
+    dateFacturation LocalDate,
+    prixUnite BigDecimal,
+    tva Integer,
+    quantite Integer,
+    fraisLivraison Long,
+    methodPaiment String,
+    etatFacture String
+}
+
+
+entity PhaseProduction{
+	codePhase String,
+    dateDebut LocalDate,
+    dateFin LocalDate,
+    nombrePoulets Integer,
+    nombreDeces Integer
+}
+
+
+entity Depense{
+	codeDepense String,
+    quantite Integer,
+    dateDemande LocalDate,
+    tva Integer,
+    etatDepense String    
+}
+
+entity Produit{
+	codeProduit String,
+	designation String,
+    prixUnitaire BigDecimal
+}
+entity TypeProduit{
+	codeTypeProduit String,
+	designation String
+}
+entity LigneEclairage{
+	codeLigne String,
+    description String,
+    allume Boolean,
+    luxMax Integer,
+    luxMin Integer,
+    luxChoisi Integer
+}
+entity Batiment{
+	codeBatiment String,
+    surface Long
+}
+
+entity Vente{
+	quantite Integer,
+    prixUnitaire BigDecimal,
+    description String,
+    methodPaiment String
+}
+
+entity Client{
+	nomComplet String,
+    numeroTel String,
+    adresse String,
+    email String,
+    numeroCompteBancaire String
+}
+entity LogParametreEnvironement{
+	temperature Integer,
+    humidite Integer,
+    dateLog LocalDate
+}
+
+relationship OneToOne {
+    Produit{type} to TypeProduit
+} 
+
+relationship ManyToOne {
+	Employe{fonction} to Fonction,
+    Depense{foursnisseur} to Fournisseur,
+    Emplacement{stock} to Stock,
+    Produit{emplacement} to Emplacement,
+    PhaseProduction{batiment} to Batiment,
+    PhaseProduction{listeDepenses} to Depense,
+    Vente{client} to Client,
+    Vente{phaseProduction} to PhaseProduction
+}
+
+relationship OneToMany {
+    Facture{depense} to Depense
+    PhaseProduction{logParametreEnvironement} to LogParametreEnvironement
+    Batiment{ligneEclairage} to LigneEclairage
+} 
+
+dto * with mapstruct
+service all with serviceImpl

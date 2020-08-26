@@ -1,0 +1,25 @@
+{
+  "name": "Stock",
+  "fields": [
+    {
+      "fieldName": "codeStock",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "surface",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200820110600",
+  "entityTableName": "stock",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

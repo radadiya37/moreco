@@ -1,0 +1,37 @@
+{
+  "name": "Emplacement",
+  "fields": [
+    {
+      "fieldName": "codeEmplacement",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "volume",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "reserve",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "stock",
+      "otherEntityRelationshipName": "emplacement",
+      "relationshipName": "stock",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200820110700",
+  "entityTableName": "emplacement",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

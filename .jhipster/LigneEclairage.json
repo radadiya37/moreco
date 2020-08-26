@@ -1,0 +1,49 @@
+{
+  "name": "LigneEclairage",
+  "fields": [
+    {
+      "fieldName": "codeLigne",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "allume",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "luxMax",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "luxMin",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "luxChoisi",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "batiment",
+      "otherEntityRelationshipName": "ligneEclairage",
+      "relationshipName": "batiment",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200820111200",
+  "entityTableName": "ligne_eclairage",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

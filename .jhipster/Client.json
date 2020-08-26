@@ -1,0 +1,37 @@
+{
+  "name": "Client",
+  "fields": [
+    {
+      "fieldName": "nomComplet",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numeroTel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "adresse",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numeroCompteBancaire",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200820111500",
+  "entityTableName": "client",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

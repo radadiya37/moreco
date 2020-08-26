@@ -1,0 +1,45 @@
+{
+  "name": "Produit",
+  "fields": [
+    {
+      "fieldName": "codeProduit",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "designation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prixUnitaire",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "typeProduit",
+      "otherEntityRelationshipName": "produit",
+      "relationshipName": "type",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "emplacement",
+      "otherEntityRelationshipName": "produit",
+      "relationshipName": "emplacement",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200820110500",
+  "entityTableName": "produit",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

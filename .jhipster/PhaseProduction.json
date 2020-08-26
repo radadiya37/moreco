@@ -1,0 +1,58 @@
+{
+  "name": "PhaseProduction",
+  "fields": [
+    {
+      "fieldName": "codePhase",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateDebut",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateFin",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nombrePoulets",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "nombreDeces",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "logParametreEnvironement",
+      "otherEntityRelationshipName": "phaseProduction",
+      "relationshipName": "logParametreEnvironement"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "batiment",
+      "otherEntityRelationshipName": "phaseProduction",
+      "relationshipName": "batiment",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "depense",
+      "otherEntityRelationshipName": "phaseProduction",
+      "relationshipName": "listeDepenses",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200820110900",
+  "entityTableName": "phase_production",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

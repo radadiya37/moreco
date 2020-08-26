@@ -1,0 +1,52 @@
+{
+  "name": "Depense",
+  "fields": [
+    {
+      "fieldName": "codeDepense",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quantite",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "dateDemande",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "tva",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "etatDepense",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "fournisseur",
+      "otherEntityRelationshipName": "depense",
+      "relationshipName": "foursnisseur",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "facture",
+      "otherEntityRelationshipName": "depense",
+      "relationshipName": "facture",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200820111000",
+  "entityTableName": "depense",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

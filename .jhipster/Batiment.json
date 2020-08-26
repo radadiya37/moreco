@@ -1,0 +1,32 @@
+{
+  "name": "Batiment",
+  "fields": [
+    {
+      "fieldName": "codeBatiment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "surface",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "ligneEclairage",
+      "otherEntityRelationshipName": "batiment",
+      "relationshipName": "ligneEclairage"
+    }
+  ],
+  "changelogDate": "20200820111300",
+  "entityTableName": "batiment",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

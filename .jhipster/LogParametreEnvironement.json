@@ -1,0 +1,37 @@
+{
+  "name": "LogParametreEnvironement",
+  "fields": [
+    {
+      "fieldName": "temperature",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "humidite",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "dateLog",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "phaseProduction",
+      "otherEntityRelationshipName": "logParametreEnvironement",
+      "relationshipName": "phaseProduction",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200820111600",
+  "entityTableName": "log_parametre_environement",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

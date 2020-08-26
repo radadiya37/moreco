@@ -1,0 +1,48 @@
+{
+  "name": "Vente",
+  "fields": [
+    {
+      "fieldName": "quantite",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "prixUnitaire",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "methodPaiment",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "vente",
+      "relationshipName": "client",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "phaseProduction",
+      "otherEntityRelationshipName": "vente",
+      "relationshipName": "phaseProduction",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200820111400",
+  "entityTableName": "vente",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

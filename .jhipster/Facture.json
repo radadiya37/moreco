@@ -1,0 +1,56 @@
+{
+  "name": "Facture",
+  "fields": [
+    {
+      "fieldName": "numeroFacture",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateFacturation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "prixUnite",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "tva",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "quantite",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "fraisLivraison",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "methodPaiment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "etatFacture",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "depense",
+      "otherEntityRelationshipName": "facture",
+      "relationshipName": "depense"
+    }
+  ],
+  "changelogDate": "20200820110800",
+  "entityTableName": "facture",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

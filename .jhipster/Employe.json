@@ -1,0 +1,65 @@
+{
+  "name": "Employe",
+  "fields": [
+    {
+      "fieldName": "prenom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numeroTel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateEmbauche",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "salaire",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "adresse",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cin",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateNaissance",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "sexe",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "fonction",
+      "otherEntityRelationshipName": "employe",
+      "relationshipName": "fonction",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200820110200",
+  "entityTableName": "employe",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
